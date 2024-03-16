@@ -6,6 +6,11 @@ final class PesaKitTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(PesaKit().text, "Hello, World!")
+        let config = PesaKitConfig(consumerKey: "test", consumerSecret: "test")
+        PesaKit.configure(with: config)
+        
+        let stk = PesaKit.getInstance().stkPush()
+        
+        XCTAssertEqual(stk, "one")
     }
 }
