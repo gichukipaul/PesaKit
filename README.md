@@ -4,16 +4,17 @@ Pesakit is a lightweight and efficient Swift library for integrating M-Pesa mobi
 - Swift
 - CompletionHandlers
 - MVVM (Model-View-ViewModel) architecture
+- CI/CD
 - SOLID & DRY principles
 
 ## Features
-- Secure Authentication: Pesakit provides secure authentication using Basic Authentication with API key and secret, ensuring that sensitive information is protected.
+- Secure Authentication: Pesakit provides secure authentication using Basic Authentication(Bearer Tokens) with API key and secret, ensuring that sensitive information is protected.
 - Payment Initiation: Initiate payment transactions effortlessly with just a few lines of code, enabling users to make payments for goods and services through the M-Pesa platform.
 - Robust Error Handling: Pesakit includes a robust error handling mechanism that provides clear feedback on failed requests, helping developers troubleshoot and handle errors gracefully in their applications.
 - Comprehensive Documentation: The library comes with comprehensive documentation, including a quick start guide, API reference, and code examples, to facilitate easy integration into iOS applications.
 
 ## Upcoming Features
-We are continuously working on enhancing PesaKit. Stay tuned for upcoming features, including:
+I am continuously working on enhancing PesaKit. Stay tuned for upcoming features, including:
 - Async/Await (for efficient multithreading)
 - Customer To Business Register URL(C2B) - Register URL API works hand in hand with Customer to Business (C2B) APIs and allows receiving payment notifications to your paybill. This API enables you to register the callback URLs via which you shall receive notifications for payments to your pay bill/till number. 
 - Business To Customer (B2C) - B2C API is an API used to make payments from a Business to Customers
@@ -29,13 +30,18 @@ To start using Pesakit, follow these steps:
    - Choose the version or branch you want to use.
    - Click `Next` and follow the prompts to complete the installation.
 - **Configuration and Authentication**: 
-   - Obtain your API key and secret from the [M-Pesa developer portal](https://developer.safaricom.co.ke).
-   - Configure authentication by providing your credentials:
+   - Obtain your API key and secret from the [M-Pesa/Safaricom developer portal](https://developer.safaricom.co.ke).
+   - Configure authentication in the AppDelegate of the root view of your SwiftUI app by providing your credentials:
      ```swift
      import PesaKit
-
-     let config = PesaKitConfig(consumerKey: "yourConsumerKey", consumerSecret: "yourConsumerSecret")
-     PesaKit.configure(with: config)
+        
+     WindowGroup {
+            ContentView()
+                .onAppear {
+                    let config = PesaKitConfig(consumerKey: "yourConsumerKey", consumerSecret: "yourConsumerSecret")
+                    PesaKit.configure(with: config)
+                }
+        }
      ```
 
 - **Usage**: 
