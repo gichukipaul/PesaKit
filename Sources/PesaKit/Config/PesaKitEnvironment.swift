@@ -4,11 +4,11 @@
 //
 
 import Foundation
-enum PesaKitEnvironment: String {
+public enum PesaKitEnvironment: String {
     case DEV
     case PRODUCTION
     
-    var credentialsUrl: String {
+    public var credentialsUrl: String {
         switch self {
             case .DEV:
                 return "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials"

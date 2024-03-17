@@ -7,8 +7,8 @@
 
 import Foundation
 public struct PesaKitConfig {
-    let consumerKey: String
-    let consumerSecret: String
+    public let consumerKey: String
+    public let consumerSecret: String
     
     var credentials: String {
         "\(consumerKey):\(consumerSecret)"
