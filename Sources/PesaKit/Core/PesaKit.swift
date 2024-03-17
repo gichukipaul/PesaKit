@@ -9,7 +9,7 @@ public class PesaKit {
     
     private init() { }
     
-    static func configure(with config: PesaKitConfig, environment: PesaKitEnvironment = .DEV) {
+    public static func configure(with config: PesaKitConfig, environment: PesaKitEnvironment = .DEV) {
         guard shared.pesaKitConfig == nil else {
             fatalError("Config must be set only once")
         }
@@ -65,7 +65,7 @@ public class PesaKit {
         }.resume()
     }
     
-    func lipaNaMpesa(paymentRequest: LipaNaMpesaPaymentRequest, completion: @escaping (Result<LipaNaMpesaResponse, PesaError>) -> Void) {
+    public func lipaNaMpesa(paymentRequest: LipaNaMpesaPaymentRequest, completion: @escaping (Result<LipaNaMpesaResponse, PesaError>) -> Void) {
             // Authenticate and handle authentication result
         authenticate { [self] result in
             switch result {

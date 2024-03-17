@@ -21,7 +21,7 @@ let package = Package(
         .target(
             name: "PesaKit",
             dependencies: [],
-            path: "Sources/PesaKit"),
+            path: "Sources"),
         .testTarget(
             name: "PesaKitTests",
             dependencies: ["PesaKit"]),
