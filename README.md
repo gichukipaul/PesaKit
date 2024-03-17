@@ -19,17 +19,17 @@ We are continuously working on enhancing PesaKit. Stay tuned for upcoming featur
 - Business To Customer (B2C) - B2C API is an API used to make payments from a Business to Customers
 - Transaction Status - Check the status of a transaction.
 - Account Balance - The Account Balance API is used to request the account balance of a short code. This can be used for both B2C, buy goods and pay bill accounts.
--  Reversals - Reverses a C2B M-Pesa transaction. Once a customer pays and there is a need to reverse the transaction, the organization will use this API to reverse the amount.
+- Reversals - Reverses a C2B M-Pesa transaction. Once a customer pays and there is a need to reverse the transaction, the organization will use this API to reverse the amount.
 
 ## Getting Started with Pesakit
 To start using Pesakit, follow these steps:
 - **Installation**: 
-   - In Xcode, navigate to `File` -> `Swift Packages` -> `Add Package Dependency...`.
+   - In Xcode, navigate to `File` -> `Add Package`.
    - Enter the URL of the Pesakit repository: `https://github.com/gichukipaul/PesaKit`.
    - Choose the version or branch you want to use.
    - Click `Next` and follow the prompts to complete the installation.
 - **Configuration and Authentication**: 
-   - Obtain your API key and secret from the M-Pesa developer portal.
+   - Obtain your API key and secret from the [M-Pesa developer portal](https://developer.safaricom.co.ke).
    - Configure authentication by providing your credentials:
      ```swift
      import PesaKit
@@ -64,6 +64,6 @@ To start using Pesakit, follow these steps:
 I welcome contributions from the community to help improve Pesakit. If you find any bugs, have feature requests, or want to contribute enhancements, please submit a pull request or open an issue on GitHub.
 
 ## Acknowledgments
-I would like to express my gratitude to the [Safaricom](https://developer.safaricom.co.ke), and all contributors who have played a role in making PesaKit possible.
+I would like to express my gratitude to the [Safaricom](https://developer.safaricom.co.ke) and all contributors who have played a role in making PesaKit possible.
 ## License
 This project is licensed under the [MIT License](LICENSE).
