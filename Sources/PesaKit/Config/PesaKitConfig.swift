@@ -2,11 +2,11 @@
 //  PesaKitConfig.swift
 //  
 //
-//  Created by user on 16/03/2024.
+//  Created by GichukiPaul on 16/03/2024.
 //
 
 import Foundation
-struct PesaKitConfig {
+public struct PesaKitConfig {
     let consumerKey: String
     let consumerSecret: String
     
