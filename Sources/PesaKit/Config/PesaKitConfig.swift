@@ -14,7 +14,8 @@ public struct PesaKitConfig {
         self.consumerKey = consumerKey
         self.consumerSecret = consumerSecret
     }
-    var credentials: String {
+    
+    public var credentials: String {
         "\(consumerKey):\(consumerSecret)"
     }
 }
