@@ -2,7 +2,7 @@
     //  Created by GichukiPaul on 17/03/2024.
 
 import Foundation
-enum TransactionType: String, Codable {
+public enum TransactionType: String, Codable {
     case PayBill
     case Till
     
@@ -16,7 +16,7 @@ enum TransactionType: String, Codable {
     }
 }
     // MARK: PESAKIT ERRORS
-enum PesaError: Error {
+public enum PesaError: Error {
     case credentialsNotSet
     case invalidCredentials
     case invalidAccessToken

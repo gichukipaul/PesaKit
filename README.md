@@ -64,6 +64,6 @@ To start using Pesakit, follow these steps:
 I welcome contributions from the community to help improve Pesakit. If you find any bugs, have feature requests, or want to contribute enhancements, please submit a pull request or open an issue on GitHub.
 
 ## Acknowledgments
-I would like to express my gratitude to the [Safaricom](https://developer.safaricom.co.ke) and all contributors who have played a role in making PesaKit possible.
+I would like to express my gratitude to [Safaricom](https://developer.safaricom.co.ke) and all contributors who have played a role in making PesaKit possible.
 ## License
 This project is licensed under the [MIT License](LICENSE).

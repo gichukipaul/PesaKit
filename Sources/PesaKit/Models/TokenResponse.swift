@@ -3,6 +3,6 @@
 
 import Foundation
 public struct TokenResponse: Decodable {
-    let access_token: String
-    let expires_in: Int
+    public let access_token: String
+    public let expires_in: Int
 }
