@@ -1,11 +1,12 @@
 # P e s a K i t
 Pesakit is a lightweight and efficient Swift library for integrating M-Pesa mobile money services into your iOS applications. Built with simplicity and flexibility in mind, Pesakit simplifies payment initiation, transaction tracking, and error handling, allowing you to seamlessly integrate M-Pesa functionality into your apps with ease.
 ## Technologies Used
-- Swift
-- CompletionHandlers
-- MVVM (Model-View-ViewModel) architecture
-- CI/CD
-- SOLID & DRY principles
+- *Swift*
+- *CompletionHandlers*
+- *Async/Await*
+- *MVVM (Model-View-ViewModel) architecture*
+- *CI/CD with Github Actions*
+- *SOLID & DRY principles*
 
 ## Features
 - Secure Authentication: Pesakit provides secure authentication using Basic Authentication(Bearer Tokens) with API key and secret, ensuring that sensitive information is protected.
@@ -27,8 +28,7 @@ To start using Pesakit, follow these steps:
 - **Installation**: 
    - In Xcode, navigate to `File` -> `Add Package`.
    - Enter the URL of the Pesakit repository: `https://github.com/gichukipaul/PesaKit`.
-   - Choose the version or branch you want to use.
-   - Click `Next` and follow the prompts to complete the installation.
+   - Choose the version or branch you want to use. Click `Next` and follow the prompts to complete the installation.
 - **Configuration and Authentication**: 
    - Obtain your API key and secret from the [M-Pesa/Safaricom developer portal](https://developer.safaricom.co.ke).
    - Configure authentication in the AppDelegate of the root view of your SwiftUI app by providing your credentials:
