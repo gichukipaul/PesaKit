@@ -122,4 +122,57 @@ public class PesaKit {
             }.resume()
         }
     }
+    
+    @available(macOS 12.0, *)
+    @available(iOS 15.0, *)
+    private func authenticate() async throws -> TokenResponse {
+        guard let pesaKitConfig = pesaKitConfig, !pesaKitConfig.consumerKey.isEmpty, !pesaKitConfig.consumerSecret.isEmpty else {
+            throw PesaError.invalidCredentials
+        }
+        
+        let credentials = pesaKitConfig.credentials
+        let base64Credentials = Data(credentials.utf8).base64EncodedString()
+        let authHeader = "Basic \(base64Credentials)"
+        
+        guard let url = URL(string: environment.credentialsUrl) else {
+            throw PesaError.invalidEnvironment
+        }
+        
+        var request = URLRequest(url: url, timeoutInterval: Double.infinity)
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue(authHeader, forHTTPHeaderField: "Authorization")
+        request.httpMethod = "GET"
+        
+        let (data, _) = try await URLSession.shared.data(for: request)
+        return try JSONDecoder().decode(TokenResponse.self, from: data)
+    }
+    
+    @available(macOS 12.0, *)
+    @available(iOS 15.0, *)
+    public func lipaNaMpesa(paymentRequest: LipaNaMpesaPaymentRequest) async throws -> LipaNaMpesaResponse {
+        let tokenResponse = try await authenticate()
+        UserDefaults.standard.set(tokenResponse.access_token, forKey: "token")
+        
+        guard let token = UserDefaults.standard.string(forKey: "token") else {
+            throw PesaError.invalidAccessToken
+        }
+        
+        guard let url = URL(string: environment.lipaNaMpesaUrl) else {
+            throw PesaError.invalidEnvironment
+        }
+        
+        var request = URLRequest(url: url, timeoutInterval: Double.infinity)
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        request.httpMethod = "POST"
+        
+            // Encode payment request body
+        guard let body = try? JSONEncoder().encode(paymentRequest) else {
+            throw PesaError.encodingError("Cannot encode paymentRequest body")
+        }
+        request.httpBody = body
+        
+        let (data, _) = try await URLSession.shared.data(for: request)
+        return try JSONDecoder().decode(LipaNaMpesaResponse.self, from: data)
+    }
 }
