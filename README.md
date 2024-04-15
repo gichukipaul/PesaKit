@@ -1,5 +1,5 @@
 # P e s a K i t
-Pesakit is a lightweight and efficient Swift library for integrating M-Pesa mobile money services into your iOS applications. Built with simplicity and flexibility in mind, Pesakit simplifies payment initiation, transaction tracking, and error handling, allowing you to seamlessly integrate M-Pesa functionality into your apps with ease.
+Pesakit is a lightweight and efficient Swift library for integrating M-Pesa mobile money services into your iOS applications. Built with simplicity and flexibility in mind, Pesakit simplifies payment initiation, transaction tracking, and error handling, allowing you to easily integrate M-Pesa functionality into your apps.
 ## Technologies Used
 - *Swift*
 - *CompletionHandlers*
@@ -17,17 +17,17 @@ Pesakit is a lightweight and efficient Swift library for integrating M-Pesa mobi
 ## Upcoming Features
 I am continuously working on enhancing PesaKit. Stay tuned for upcoming features, including:
 - Async/Await (for efficient multithreading)
-- Customer To Business Register URL(C2B) - Register URL API works hand in hand with Customer to Business (C2B) APIs and allows receiving payment notifications to your paybill. This API enables you to register the callback URLs via which you shall receive notifications for payments to your pay bill/till number. 
-- Business To Customer (B2C) - B2C API is an API used to make payments from a Business to Customers
-- Transaction Status - Check the status of a transaction.
-- Account Balance - The Account Balance API is used to request the account balance of a short code. This can be used for both B2C, buy goods and pay bill accounts.
-- Reversals - Reverses a C2B M-Pesa transaction. Once a customer pays and there is a need to reverse the transaction, the organization will use this API to reverse the amount.
+- `Customer To Business Register URL(C2B)` - Register URL API works hand in hand with Customer to Business (C2B) APIs and allows receiving payment notifications to your `paybill`. This API enables you to register the callback URLs via which you shall receive payments notifications to your pay bill/till number. 
+- `Business To Customer (B2C)` - B2C API is an API used to make payments from a Business to Customers
+- `Transaction Status` - Check the status of a transaction.
+- `Account Balance` - The Account Balance API is used to request the account balance of a short code. This can be used for both `B2C`, `Buy goods` and `pay bill` accounts.
+- `Reversals` - Reverses a C2B M-Pesa transaction. Once a customer pays and there is a need to reverse the transaction, the organization will use this API to reverse the amount.
 
 ## Getting Started with Pesakit
 To start using Pesakit, follow these steps:
 - **Installation**: 
-   - In Xcode, navigate to `File` -> `Add Package`.
-   - Enter the URL of the Pesakit repository: `https://github.com/gichukipaul/PesaKit`.
+   - In Xcode, navigate to ` File ` -> ` Add Package `.
+   - Enter the URL of the Pesakit repository: ` https://github.com/gichukipaul/PesaKit `.
    - Choose the version or branch you want to use. Click `Next` and follow the prompts to complete the installation.
 - **Configuration and Authentication**: 
    - Obtain your API key and secret from the [M-Pesa/Safaricom developer portal](https://developer.safaricom.co.ke).
@@ -63,7 +63,7 @@ To start using Pesakit, follow these steps:
          }
      }
      ```
-- Error Handling: Implement error handling logic to gracefully handle failed requests and unexpected responses.
+- Error Handling: Implement error handling logic to handle failed requests and unexpected responses gracefully.
 - Documentation: Refer to the documentation for detailed usage instructions, code examples, and API reference.
 
 ## Contributions
