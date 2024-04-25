@@ -1,6 +1,6 @@
 # P e s a K i t
 Pesakit is a lightweight and efficient Swift library for integrating M-Pesa mobile money services into your iOS applications. Built with simplicity and flexibility in mind, Pesakit simplifies payment initiation, transaction tracking, and error handling, allowing you to easily integrate M-Pesa functionality into your apps.
-## Technologies Used
+## **Technologies Used**
 - *Swift*
 - *CompletionHandlers*
 - *Async/Await*
