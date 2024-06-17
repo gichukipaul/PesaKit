@@ -16,7 +16,7 @@ Pesakit is a lightweight and efficient Swift library for integrating M-Pesa mobi
 
 ## Upcoming Features
 I am continuously working on enhancing PesaKit. Stay tuned for upcoming features, including:
-- Async/Await (for efficient multithreading)
+- Async/Await (for multithreading)
 - `Customer To Business Register URL(C2B)` - Register URL API works hand in hand with Customer to Business (C2B) APIs and allows receiving payment notifications to your `pay bill`. This API enables you to register the callback URLs via which you shall receive payment notifications to your pay bill/till number. 
 - `Business To Customer (B2C)` - B2C API is an API used to make payments from a Business to Customers
 - `Transaction Status` - Check the status of a transaction.
@@ -27,7 +27,7 @@ I am continuously working on enhancing PesaKit. Stay tuned for upcoming features
 To start using Pesakit, follow these steps:
 - **Installation**: 
    - In Xcode, navigate to ` File ` -> ` Add Package `.
-   - Enter the URL of the Pesakit repository: ` https://github.com/gichukipaul/PesaKit `.
+   - Enter the GIT URL of the Pesakit repository: ` https://github.com/gichukipaul/PesaKit `.
    - Choose the version or branch you want to use. Click `Next` and follow the prompts to complete the installation.
 - **Configuration and Authentication**: 
    - Obtain your API key and secret from the [M-Pesa/Safaricom developer portal](https://developer.safaricom.co.ke).
@@ -42,6 +42,7 @@ To start using Pesakit, follow these steps:
                     PesaKit.configure(with: config)
                 }
         }
+     
      ```
 
 - **Usage**: 
@@ -62,6 +63,7 @@ To start using Pesakit, follow these steps:
              print("Payment failed: \(error)")
          }
      }
+     
      ```
 - Error Handling: Implement error handling logic to handle failed requests and unexpected responses gracefully.
 - Documentation: Refer to the documentation for detailed usage instructions, code examples, and API references.
