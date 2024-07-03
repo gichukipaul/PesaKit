@@ -52,7 +52,7 @@ To start using Pesakit, follow these steps:
      import PesaKit
 
      // Example of using lipaNaMpesa method
-     let paymentRequest = LipaNaMpesaPaymentRequest(/* provide necessary parameters */)
+     var paymentRequest = LipaNaMpesaPaymentRequest(/* provide necessary parameters */)
      PesaKit.getInstance().lipaNaMpesa(paymentRequest: paymentRequest) { result in
          switch result {
          case .success(let response):
@@ -65,12 +65,11 @@ To start using Pesakit, follow these steps:
      }
      
      ```
-- Error Handling: Implement error handling logic to handle failed requests and unexpected responses gracefully.
+- Error Handling: Implement error handling logic to handle failed requests and unexpected responses.
 - Documentation: Refer to the documentation for detailed usage instructions, code examples, and API references.
 
 ## Contributions
 I welcome contributions from the community to help improve Pesakit. If you find any bugs, have feature requests, or want to contribute enhancements, please submit a pull request or open an issue on GitHub.
-
 ## Acknowledgments
 I would like to express my gratitude to [Safaricom](https://developer.safaricom.co.ke) and all contributors who have played a role in making PesaKit possible.
 ## License
