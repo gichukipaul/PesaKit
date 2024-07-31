@@ -23,7 +23,7 @@ I am continuously working on enhancing PesaKit. Stay tuned for upcoming features
 - `Account Balance` - The Account Balance API is used to request the account balance of a short code. This can be used for both `B2C`, `Buy goods` and `pay bill` accounts.
 - `Reversals` - Reverses a C2B M-Pesa transaction. Once a customer pays and there is a need to reverse the transaction, the organization will use this API to reverse the amount.
 
-## Getting Started with Pesakit
+## How To Get Started with Pesakit
 To start using Pesakit, follow these steps:
 - **Installation**: 
    - In Xcode, navigate to ` File ` -> ` Add Package `.
@@ -68,7 +68,7 @@ To start using Pesakit, follow these steps:
 - Error Handling: Implement error handling logic to handle failed requests and unexpected responses.
 - Documentation: Refer to the documentation for detailed usage instructions, code examples, and API references.
 
-## Contributions
+## How To Contribute
 I welcome contributions from the community to help improve Pesakit. If you find any bugs, have feature requests, or want to contribute enhancements, please submit a pull request or open an issue on GitHub.
 ## Acknowledgments
 I would like to express my gratitude to [Safaricom](https://developer.safaricom.co.ke) and all contributors who have played a role in making PesaKit possible.
