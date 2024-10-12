@@ -6,7 +6,6 @@ Pesakit is a lightweight and efficient Swift SDK for integrating M-Pesa mobile m
 - *Async/Await*
 - *MVVM (Model-View-ViewModel) architecture*
 - *CI/CD with GitHub Actions*
-- *SOLID & DRY principles*
 
 ## Features
 - Secure Authentication: Pesakit provides secure authentication using Basic Authentication(Bearer Tokens) with API key and secret, ensuring that sensitive information is protected.
@@ -16,7 +15,7 @@ Pesakit is a lightweight and efficient Swift SDK for integrating M-Pesa mobile m
 
 ## Upcoming Features
 I am continuously working on enhancing PesaKit. Stay tuned for upcoming features, including:
-- Async/Await (for multithreading)
+- Async/Await (for multithreading/concurrency)
 - `Customer To Business Register URL(C2B)` - Register URL API works hand in hand with `Customer to Business (C2B)` APIs and allows receiving payment notifications to your `pay bill`. This API enables you to register the callback URLs via which you shall receive payment notifications to your pay bill/till number. 
 - `Business To Customer (B2C)` - B2C API is an API used to make payments from a Business to Customers
 - `Transaction Status` - Check the status of a transaction.
