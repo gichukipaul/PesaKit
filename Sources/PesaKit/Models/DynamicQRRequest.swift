@@ -11,7 +11,7 @@ public struct DynamicQRRequest: Codable {
     public let TrxCode: QRTransactionCode
     public let CPI: String
     public let Size: String
-
+    
     public init(merchantName: String, refNo: String, amount: Int, trxCode: QRTransactionCode, cpi: String, size: String = "300") {
         self.MerchantName = merchantName
         self.RefNo = refNo

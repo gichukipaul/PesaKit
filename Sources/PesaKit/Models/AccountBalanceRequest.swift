@@ -13,7 +13,7 @@ public struct AccountBalanceRequest: Codable {
     public let Remarks: String
     public let QueueTimeOutURL: String
     public let ResultURL: String
-
+    
     public init(initiator: String, securityCredential: String, partyA: String, identifierType: String = "4", remarks: String, queueTimeOutURL: String, resultURL: String) {
         self.Initiator = initiator
         self.SecurityCredential = securityCredential

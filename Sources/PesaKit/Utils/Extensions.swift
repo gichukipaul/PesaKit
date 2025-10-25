@@ -1,5 +1,5 @@
-    //  Extensions.swift
-    //  Created by GichukiPaul on 16/03/2024.
+//  Extensions.swift
+//  Created by GichukiPaul on 16/03/2024.
 
 
 import Foundation

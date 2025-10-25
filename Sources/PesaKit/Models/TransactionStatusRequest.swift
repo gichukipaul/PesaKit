@@ -16,7 +16,7 @@ public struct TransactionStatusRequest: Codable {
     public let QueueTimeOutURL: String
     public let Remarks: String
     public let Occasion: String
-
+    
     public init(initiator: String, securityCredential: String, transactionID: String, originatorConversationID: String, partyA: String, identifierType: String = "4", resultURL: String, queueTimeOutURL: String, remarks: String, occasion: String = "") {
         self.Initiator = initiator
         self.SecurityCredential = securityCredential

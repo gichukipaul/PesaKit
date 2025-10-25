@@ -9,7 +9,7 @@ public struct MpesaErrorResponse: Codable {
     public let requestId: String?
     public let errorCode: String?
     public let errorMessage: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case requestId
         case errorCode

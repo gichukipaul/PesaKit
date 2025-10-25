@@ -9,7 +9,7 @@ public struct C2BRegisterURLRequest: Codable {
     public let ResponseType: ResponseType
     public let ConfirmationURL: String
     public let ValidationURL: String
-
+    
     public init(shortCode: String, responseType: ResponseType, confirmationURL: String, validationURL: String) {
         self.ShortCode = shortCode
         self.ResponseType = responseType

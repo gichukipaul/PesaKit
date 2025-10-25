@@ -1,5 +1,5 @@
-    //  LipaNaMpesaPaymentRequest.swift
-    //  Created by GichukiPaul on 16/03/2024.
+//  LipaNaMpesaPaymentRequest.swift
+//  Created by GichukiPaul on 16/03/2024.
 import Foundation
 public struct LipaNaMpesaPaymentRequest: Codable {
     public let BusinessShortCode: Int
@@ -14,7 +14,7 @@ public struct LipaNaMpesaPaymentRequest: Codable {
     public let AccountReference: String
     public let TransactionDesc: String
     private var Password: String {
-            // This is the password used for encrypting the request sent: A base64 encoded string. (The base64 string is a combination of Shortcode+Passkey+Timestamp)
+        // This is the password used for encrypting the request sent: A base64 encoded string. (The base64 string is a combination of Shortcode+Passkey+Timestamp)
         let credentials = "\(BusinessShortCode)" + "\(LipaNaMpesaPassKey)" + "\(Timestamp)"
         return Data(credentials.utf8).base64EncodedString()
     }

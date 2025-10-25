@@ -18,7 +18,7 @@ public struct B2BRequest: Codable {
     public let Remarks: String
     public let QueueTimeOutURL: String
     public let ResultURL: String
-
+    
     public init(initiator: String, securityCredential: String, commandID: B2BCommandID, amount: Int, partyA: String, partyB: String, accountReference: String, requester: String = "", remarks: String, queueTimeOutURL: String, resultURL: String, senderIdentifierType: String = "4", receiverIdentifierType: String = "4") {
         self.Initiator = initiator
         self.SecurityCredential = securityCredential

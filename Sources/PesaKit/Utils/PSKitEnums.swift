@@ -1,12 +1,12 @@
-    //  PSKitEnums.swift
-    //  Created by GichukiPaul on 17/03/2024.
+//  PSKitEnums.swift
+//  Created by GichukiPaul on 17/03/2024.
 
 import Foundation
 public enum TransactionType: String, Codable {
     case PayBill = "CustomerPayBillOnline"
     case Till = "CustomerBuyGoodsOnline"
 }
-    // MARK: PESAKIT ERRORS
+// MARK: PESAKIT ERRORS
 public enum PesaError: Error {
     case credentialsNotSet
     case invalidCredentials
@@ -18,7 +18,7 @@ public enum PesaError: Error {
     case encodingError(String)
     case mpesaError(MpesaErrorResponse)
     case authenticationError(AuthErrorResponse)
-
+    
     public var localizedDescription: String {
         switch self {
         case .credentialsNotSet:

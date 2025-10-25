@@ -16,7 +16,7 @@ public struct ReversalRequest: Codable {
     public let QueueTimeOutURL: String
     public let Remarks: String
     public let Occasion: String
-
+    
     public init(initiator: String, securityCredential: String, transactionID: String, amount: Int, receiverParty: String, receiverIdentifierType: String = "11", resultURL: String, queueTimeOutURL: String, remarks: String, occasion: String = "") {
         self.Initiator = initiator
         self.SecurityCredential = securityCredential
