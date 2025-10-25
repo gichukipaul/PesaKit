@@ -22,9 +22,18 @@ public class PesaKit {
         guard shared.pesaKitConfig != nil else {
             fatalError("PesaKit is not configured. Call PesaKit.configure(with:environment:) before using getInstance()")
         }
-        
+
         return shared
     }
+
+    #if DEBUG
+    /// Reset configuration for testing purposes only
+    internal static func resetConfiguration() {
+        shared.pesaKitConfig = nil
+        shared.environment = .DEV
+        KeychainManager.shared.deleteToken()
+    }
+    #endif
     
     private func authenticate(completion: @escaping (Result<TokenResponse, PesaError>) -> Void) {
         guard let pesaKitConfig = pesaKitConfig, !pesaKitConfig.consumerKey.isEmpty, !pesaKitConfig.consumerSecret.isEmpty else {

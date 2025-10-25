@@ -2,14 +2,27 @@ import XCTest
 @testable import PesaKit
 
 final class PesaKitTests: XCTestCase {
+
+    override func setUp() {
+        super.setUp()
+        // Reset configuration before each test
+        PesaKit.resetConfiguration()
+    }
+
+    override func tearDown() {
+        // Clean up after each test
+        PesaKit.resetConfiguration()
+        super.tearDown()
+    }
+
     func test_PesaKitInstanceNotNil_afterConfiguration() throws {
         let config = PesaKitConfig(consumerKey: "test", consumerSecret: "test")
         PesaKit.configure(with: config)
-        
+
         let instance = PesaKit.getInstance()
         XCTAssertNotNil(instance)
     }
-    
+
         //    TEST LipaNaMpesa
     func test_successfull_LipaNaMpesa() throws {
         let py = LipaNaMpesaPaymentRequest(
@@ -24,10 +37,10 @@ final class PesaKitTests: XCTestCase {
             callBackURL: "https://safaricom.com",
             accountReference: "Test",
             transactionDesc: "Test")
-        
+
         let config = PesaKitConfig(consumerKey: "test", consumerSecret: "test")
         PesaKit.configure(with: config)
-        
+
         PesaKit.getInstance().lipaNaMpesa(paymentRequest: py) { result in
             switch result {
                 case .success(let response):
@@ -36,6 +49,6 @@ final class PesaKitTests: XCTestCase {
                     XCTAssertNil(error)
             }
         }
-        
+
     }
 }
