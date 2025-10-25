@@ -11,7 +11,7 @@ final class PesaKitTests: XCTestCase {
     }
     
         //    TEST LipaNaMpesa
-    func successfull_LipaNaMpesa() throws {
+    func test_successfull_LipaNaMpesa() throws {
         let py = LipaNaMpesaPaymentRequest(
             businessShortCode: 174379,
             lipaNaMpesaPassKey: "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919",

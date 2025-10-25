@@ -88,16 +88,25 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
-<<<<<<< HEAD
-=======
 
-
-
+# macOS
 .DS_Store
-/.build
-/Packages
-/*.xcodeproj
-xcuserdata/
-DerivedData/
-.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
->>>>>>> 48fdffd (init: Setup)
+.AppleDouble
+.LSOverride
+
+# Swift Package Manager
+.swiftpm/
+Package.resolved
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+
+# Editor backups
+*~
+*.swp
+*.swo
+
+# Documentation
+*.txt
