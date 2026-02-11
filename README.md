@@ -16,7 +16,7 @@ PesaKit is a comprehensive Swift SDK for integrating M-Pesa mobile money service
 - **Reversals**: Reverse erroneous M-Pesa transactions
 - **B2B Payments**: Transfer funds between business accounts (PayBill/BuyGoods)
 - **Dual API Support**: Both completion handlers and async/await patterns
-- **Comprehensive Error Handling**: Detailed error responses for debugging
+- **Comprehensive Error Handling**: Detailed error responses for debugging/troubleshooting
 
 ## Requirements
 
@@ -34,7 +34,6 @@ Add PesaKit to your project using Swift Package Manager:
 2. Enter the repository URL: `https://github.com/gichukipaul/PesaKit`
 3. Select the version or branch you want to use
 4. Click **Add Package**
-
 Alternatively, add it to your `Package.swift`:
 
 ```swift
