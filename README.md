@@ -4,13 +4,12 @@
 PesaKit is a comprehensive Swift SDK for integrating M-Pesa mobile money services into your iOS, macOS, tvOS, and watchOS applications. Built with simplicity and flexibility in mind, PesaKit simplifies payment processing, transaction tracking, and secure authentication.
 
 ## Features
-
 - **Secure Authentication**: OAuth 2.0 Bearer Token authentication with secure Keychain storage
 - **Lipa Na M-Pesa (STK Push)**: Initiate customer payments with mobile prompts
 - **STK Push Query**: Check the status of STK Push requests
 - **Dynamic QR**: Generate dynamic QR codes for payments
 - **C2B Register URL**: Register callback URLs for customer-to-business payments
-- **B2C Payments**: Send payments from business to customers
+- **B2C Payments**: Send payments from businesses to customers
 - **Transaction Status**: Query the status of any M-Pesa transaction
 - **Account Balance**: Check M-Pesa account balances
 - **Reversals**: Reverse erroneous M-Pesa transactions
@@ -493,14 +492,14 @@ PesaKit.configure(with: config)
 3. **Callbacks**: Ensure your callback URLs are publicly accessible and use HTTPS
 4. **Security Credential**: Generate using the Safaricom certificate tool
 5. **Identifier Types**:
-   - `1` - MSISDN
-   - `2` - Till Number
-   - `4` - Shortcode (PayBill)
+   - `1`  - MSISDN
+   - `2`  - Till Number
+   - `4`  - Shortcode (PayBill)
    - `11` - Shortcode (used for reversals)
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome. Please feel free to submit a Pull Request.
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
