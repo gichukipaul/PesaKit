@@ -1,6 +1,5 @@
 
 # PesaKit
-
 PesaKit is a comprehensive Swift SDK for integrating M-Pesa mobile money services into your iOS, macOS, tvOS, and watchOS applications. Built with simplicity and flexibility in mind, PesaKit simplifies payment processing, transaction tracking, and secure authentication.
 
 ## Features
@@ -18,17 +17,14 @@ PesaKit is a comprehensive Swift SDK for integrating M-Pesa mobile money service
 - **Comprehensive Error Handling**: Detailed error responses for debugging/troubleshooting
 
 ## Requirements
-
 - iOS 15.0+ / macOS 12.0+ / tvOS 15.0+ / watchOS 8.0+
 - Swift 5.5+
 - Xcode 13.0+
 
 ## Installation
-
 ### Swift Package Manager
 
 Add PesaKit to your project using Swift Package Manager:
-
 1. In Xcode, go to **File** → **Add Package Dependencies**
 2. Enter the repository URL: `https://github.com/gichukipaul/PesaKit`
 3. Select the version or branch you want to use
@@ -42,7 +38,6 @@ dependencies: [
 ```
 
 ## Getting Started
-
 ### 1. Obtain M-Pesa Credentials
 
 Register your application on the [Safaricom Developer Portal](https://developer.safaricom.co.ke) to get:
@@ -52,7 +47,6 @@ Register your application on the [Safaricom Developer Portal](https://developer.
 - Shortcode/Till Number
 
 ### 2. Configure PesaKit
-
 Configure PesaKit in your app's entry point (e.g., `AppDelegate` or SwiftUI `App` struct):
 
 **SwiftUI:**
@@ -99,9 +93,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 ```
 
 ## Usage Examples
-
 ### 1. Lipa Na M-Pesa (STK Push)
-
 Initiate a payment request that prompts the customer's phone:
 
 **Completion Handler:**
@@ -153,7 +145,6 @@ Task {
 ```
 
 ### 2. STK Push Query
-
 Check the status of an STK Push request:
 
 ```swift
@@ -189,7 +180,6 @@ Task {
 ```
 
 ### 3. Dynamic QR Code Generation
-
 Generate a QR code for payments:
 
 ```swift
@@ -223,7 +213,6 @@ Task {
 ```
 
 ### 4. C2B Register URL
-
 Register validation and confirmation URLs for C2B payments:
 
 ```swift
@@ -252,7 +241,6 @@ Task {
 ```
 
 ### 5. B2C Payment (Business to Customer)
-
 Send payments from your business to customers:
 
 ```swift
@@ -288,7 +276,6 @@ Task {
 ```
 
 ### 6. Transaction Status
-
 Check the status of any M-Pesa transaction:
 
 ```swift
@@ -323,7 +310,6 @@ Task {
 ```
 
 ### 7. Account Balance
-
 Query your M-Pesa account balance:
 
 ```swift
@@ -356,7 +342,6 @@ Task {
 ```
 
 ### 8. Transaction Reversal
-
 Reverse an erroneous M-Pesa transaction:
 
 ```swift
@@ -391,7 +376,6 @@ Task {
 ```
 
 ### 9. B2B Payment (Business to Business)
-
 Transfer funds between business accounts:
 
 ```swift
@@ -429,7 +413,6 @@ Task {
 ```
 
 ## Error Handling
-
 PesaKit provides comprehensive error handling through the `PesaError` enum:
 
 ```swift
@@ -464,14 +447,12 @@ PesaKit.getInstance().lipaNaMpesa(paymentRequest: request) { result in
 ```
 
 ## Security
-
 - **Keychain Storage**: OAuth tokens are securely stored in the device Keychain
 - **Automatic Token Expiry**: Tokens are automatically invalidated when expired
 - **HTTPS Only**: All API calls use secure HTTPS connections
 - **No Credential Storage**: Consumer credentials are only used during configuration
 
 ## Testing
-
 Use the sandbox environment for testing:
 
 ```swift
@@ -486,7 +467,6 @@ PesaKit.configure(with: config)
 **Test Credentials**: Available on the [Safaricom Developer Portal](https://developer.safaricom.co.ke)
 
 ## Important Notes
-
 1. **Phone Number Format**: Always use format `254XXXXXXXXX` (without `+`)
 2. **Amount**: Amounts are in KES (Kenya Shillings) as integers
 3. **Callbacks**: Ensure your callback URLs are publicly accessible and use HTTPS
@@ -498,7 +478,6 @@ PesaKit.configure(with: config)
    - `11` - Shortcode (used for reversals)
 
 ## Contributing
-
 Contributions are welcome. Please feel free to submit a Pull Request.
 
 1. Fork the repository
@@ -508,7 +487,6 @@ Contributions are welcome. Please feel free to submit a Pull Request.
 5. Open a Pull Request
 
 ## License
-
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
@@ -517,9 +495,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - All contributors who have helped improve PesaKit
 
 ## Support
-
 For issues, questions, or contributions, please visit the [GitHub repository](https://github.com/gichukipaul/PesaKit).
 
 ## Changelog
-
 See [CHANGELOG.md](CHANGELOG.md) for a list of changes in each version.
